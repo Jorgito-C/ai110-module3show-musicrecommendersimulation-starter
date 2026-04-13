@@ -1,0 +1,27 @@
+flowchart TD
+    A[User Preferences<br/>genre, mood, energy<br/>optional: tempo, valence]
+    B[Load songs from CSV<br/>into list of song records]
+    C{{For each song<br/>in songs list}}
+    D[Compute score_song(song, prefs)<br/>genre points + mood points<br/>+ energy similarity<br/>+ optional tempo/valence]
+    E[Store result:<br/>(song, base_score, reasons)]
+    F{More songs left?}
+    G[Sort all songs by<br/>base_score descending]
+    H{{Build Top K recommendations<br/>with diversity-aware selection}}
+    I[For each remaining candidate:<br/>adjusted_score = base_score<br/>- artist repeat penalty<br/>- genre repeat penalty]
+    J[Pick highest adjusted_score<br/>Add to selected list]
+    K{Selected K songs?}
+    L[Output ranked Top K list<br/>with score + explanation]
+
+    A --> D
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F -- Yes --> C
+    F -- No --> G
+    G --> H
+    H --> I
+    I --> J
+    J --> K
+    K -- No --> H
+    K -- Yes --> L

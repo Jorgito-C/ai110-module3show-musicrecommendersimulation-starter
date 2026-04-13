@@ -1,0 +1,194 @@
+Loaded songs: 18
+
+=== High-Energy but Sad Pop (conflicting) ===
+User profile: {'genre': 'pop', 'mood': 'sad', 'energy': 0.9}
+========================================================================
+ 1. Gym Hero - Max Pulse
+    Final score : 6.82
+    Tags        : genre=pop | mood=intense
+    Reasons     :
+      - genre match (+1.0)
+      - energy similarity (+5.82)
+------------------------------------------------------------------------
+ 2. Sunrise City - Neon Echo
+    Final score : 6.52
+    Tags        : genre=pop | mood=happy
+    Reasons     :
+      - genre match (+1.0)
+      - energy similarity (+5.52)
+------------------------------------------------------------------------
+ 3. Storm Runner - Voltline
+    Final score : 5.94
+    Tags        : genre=rock | mood=intense
+    Reasons     :
+      - energy similarity (+5.94)
+------------------------------------------------------------------------
+ 4. Pixel Heartbeat - Bitstream Kids
+    Final score : 5.88
+    Tags        : genre=chiptune | mood=energetic
+    Reasons     :
+      - energy similarity (+5.88)
+------------------------------------------------------------------------
+ 5. City Pulse 3AM - Prism Line
+    Final score : 5.88
+    Tags        : genre=drum and bass | mood=urgent
+    Reasons     :
+      - energy similarity (+5.88)
+------------------------------------------------------------------------
+
+=== No-Match Genre/Mood, Energy-Dominant ===
+User profile: {'genre': 'opera', 'mood': 'furious', 'energy': 0.78}
+========================================================================
+ 1. Neon Mirage - Velvet Circuit
+    Final score : 5.94
+    Tags        : genre=afrobeats | mood=playful
+    Reasons     :
+      - energy similarity (+5.94)
+------------------------------------------------------------------------
+ 2. Rooftop Lights - Indigo Parade
+    Final score : 5.88
+    Tags        : genre=indie pop | mood=happy
+    Reasons     :
+      - energy similarity (+5.88)
+------------------------------------------------------------------------
+ 3. Night Drive Loop - Neon Echo
+    Final score : 5.82
+    Tags        : genre=synthwave | mood=moody
+    Reasons     :
+      - energy similarity (+5.82)
+------------------------------------------------------------------------
+ 4. Sunrise City - Neon Echo
+    Final score : 5.76
+    Tags        : genre=pop | mood=happy
+    Reasons     :
+      - energy similarity (+5.76)
+------------------------------------------------------------------------
+ 5. Monsoon Bazaar - Saffron Pulse
+    Final score : 5.58
+    Tags        : genre=world | mood=adventurous
+    Reasons     :
+      - energy similarity (+5.58)
+------------------------------------------------------------------------
+
+=== Out-of-Range High Energy ===
+User profile: {'genre': 'rock', 'mood': 'intense', 'energy': 1.3}
+========================================================================
+ 1. Storm Runner - Voltline
+    Final score : 5.66
+    Tags        : genre=rock | mood=intense
+    Reasons     :
+      - genre match (+1.0)
+      - mood match (+1.0)
+      - energy similarity (+3.66)
+------------------------------------------------------------------------
+ 2. Gym Hero - Max Pulse
+    Final score : 4.78
+    Tags        : genre=pop | mood=intense
+    Reasons     :
+      - mood match (+1.0)
+      - energy similarity (+3.78)
+------------------------------------------------------------------------
+ 3. Cathedral Static - Iron Veil
+    Final score : 3.90
+    Tags        : genre=metal | mood=aggressive
+    Reasons     :
+      - energy similarity (+3.90)
+------------------------------------------------------------------------
+ 4. City Pulse 3AM - Prism Line
+    Final score : 3.72
+    Tags        : genre=drum and bass | mood=urgent
+    Reasons     :
+      - energy similarity (+3.72)
+------------------------------------------------------------------------
+ 5. Pixel Heartbeat - Bitstream Kids
+    Final score : 3.48
+    Tags        : genre=chiptune | mood=energetic
+    Reasons     :
+      - energy similarity (+3.48)
+------------------------------------------------------------------------
+
+=== Out-of-Range Low Energy ===
+User profile: {'genre': 'lofi', 'mood': 'chill', 'energy': -0.2}
+========================================================================
+ 1. Library Rain - Paper Lanterns
+    Final score : 4.70
+    Tags        : genre=lofi | mood=chill
+    Reasons     :
+      - genre match (+1.0)
+      - mood match (+1.0)
+      - energy similarity (+2.70)
+------------------------------------------------------------------------
+ 2. Midnight Coding - LoRoom
+    Final score : 4.28
+    Tags        : genre=lofi | mood=chill
+    Reasons     :
+      - genre match (+1.0)
+      - mood match (+1.0)
+      - energy similarity (+2.28)
+------------------------------------------------------------------------
+ 3. Spacewalk Thoughts - Orbit Bloom
+    Final score : 4.12
+    Tags        : genre=ambient | mood=chill
+    Reasons     :
+      - mood match (+1.0)
+      - energy similarity (+3.12)
+------------------------------------------------------------------------
+ 4. Focus Flow - LoRoom
+    Final score : 3.40
+    Tags        : genre=lofi | mood=focused
+    Reasons     :
+      - genre match (+1.0)
+      - energy similarity (+2.40)
+------------------------------------------------------------------------
+ 5. Velvet Alley - Blue Ember
+    Final score : 2.82
+    Tags        : genre=blues | mood=melancholic
+    Reasons     :
+      - energy similarity (+2.82)
+------------------------------------------------------------------------
+
+=== Tempo/Valence Exploit Candidate ===
+User profile: {'genre': 'ambient', 'mood': 'intense', 'energy': 0.9, 'tempo': 220, 'valence': 0.05}
+========================================================================
+ 1. Storm Runner - Voltline
+    Final score : 7.99
+    Tags        : genre=rock | mood=intense
+    Reasons     :
+      - mood match (+1.0)
+      - energy similarity (+5.94)
+      - tempo similarity (+0.48)
+      - valence similarity (+0.57)
+------------------------------------------------------------------------
+ 2. Gym Hero - Max Pulse
+    Final score : 7.28
+    Tags        : genre=pop | mood=intense
+    Reasons     :
+      - mood match (+1.0)
+      - energy similarity (+5.82)
+      - tempo similarity (+0.18)
+      - valence similarity (+0.28)
+------------------------------------------------------------------------
+ 3. Cathedral Static - Iron Veil
+    Final score : 7.27
+    Tags        : genre=metal | mood=aggressive
+    Reasons     :
+      - energy similarity (+5.70)
+      - tempo similarity (+0.84)
+      - valence similarity (+0.73)
+------------------------------------------------------------------------
+ 4. City Pulse 3AM - Prism Line
+    Final score : 7.13
+    Tags        : genre=drum and bass | mood=urgent
+    Reasons     :
+      - energy similarity (+5.88)
+      - tempo similarity (+0.81)
+      - valence similarity (+0.44)
+------------------------------------------------------------------------
+ 5. Pixel Heartbeat - Bitstream Kids
+    Final score : 6.56
+    Tags        : genre=chiptune | mood=energetic
+    Reasons     :
+      - energy similarity (+5.88)
+      - tempo similarity (+0.42)
+      - valence similarity (+0.26)
+------------------------------------------------------------------------
