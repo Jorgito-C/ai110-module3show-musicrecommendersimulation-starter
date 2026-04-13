@@ -32,6 +32,10 @@ Advanced features added:
 - **Process (Scoring Loop):** For each song in the CSV, the algorithm calculates a weighted score and records explanation reasons.
 - **Output (Ranking):** Songs are sorted by score, then a diversity-aware pass selects the final top `k` recommendations.
 
+### Recommendation Flowchart
+
+![Recommendation flowchart](flow.png)
+
 ### Current Scoring Recipe
 
 For each song, compute:
