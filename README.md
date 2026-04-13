@@ -17,19 +17,45 @@ Replace this paragraph with your own summary of what your version does.
 
 ## How The System Works
 
-Explain your design in plain language.
+This project uses a transparent, content-based recommender. The system compares each song in `data/songs.csv` to a user's preferences, assigns points using a fixed scoring recipe, and returns the top `k` songs after ranking.
 
-Some prompts to answer:
+Features used in this simulation:
 
-- What features does each `Song` use in your system
-  - For example: genre, mood, energy, tempo
-- What information does your `UserProfile` store
-- How does your `Recommender` compute a score for each song
-- How do you choose which songs to recommend
+- `Song` features: `genre`, `mood`, `energy`, `tempo_bpm`, `valence`, `danceability`, `acousticness`
+- `UserProfile` features: preferred `genre`, preferred `mood`, target `energy`, target `tempo_bpm`, target `valence`, target `danceability`, target `acousticness`
 
-You can include a simple diagram or bullet list if helpful.
+### Data Flow (Input -> Process -> Output)
+
+- **Input (User Prefs):** A profile such as `genre`, `mood`, and target `energy` (with optional `tempo` and `valence`).
+- **Process (Scoring Loop):** For each song in the CSV, the algorithm calculates a weighted score and records explanation reasons.
+- **Output (Ranking):** Songs are sorted by score, then a diversity-aware pass selects the final top `k` recommendations.
+
+### Finalized Algorithm Recipe
+
+For each song, compute:
+
+- `+2.0` points for a **genre match**
+- `+1.0` point for a **mood match**
+- `+3.0 * (1 - abs(song_energy - user_target_energy))` for **energy similarity**
+- Optional add-ons (if provided): tempo similarity and valence similarity
+
+Then:
+
+1. Sort all songs by base score (highest first).
+2. Build top `k` recommendations one-by-one.
+3. Apply small diversity penalties during selection:
+   - repeated artist: `-0.75`
+   - repeated genre: `-0.50`
+
+### Potential Biases and Limitations
+
+- This system may over-prioritize **genre**, causing it to miss songs in other genres that strongly match mood and energy.
+- Fixed weights reflect the designer's assumptions, not every listener's true preferences.
+- With a small catalog, repeated artists or genres can still dominate even with diversity penalties.
+- Content-only scoring ignores listening behavior, context, lyrics, and cultural factors that influence taste.
 
 ---
+
 
 ## Getting Started
 
@@ -53,6 +79,12 @@ pip install -r requirements.txt
 ```bash
 python -m src.main
 ```
+
+### Example CLI Output
+
+The screenshot below shows terminal recommendations with song title, final score, and scoring reasons.
+
+![CLI recommendation output](cli_demo.png)
 
 ### Running Tests
 

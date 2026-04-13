@@ -9,3 +9,11 @@ id,title,artist,genre,mood,energy,tempo_bpm,valence,danceability,acousticness
 8,Night Drive Loop,Neon Echo,synthwave,moody,0.75,110,0.49,0.73,0.22
 9,Focus Flow,LoRoom,lofi,focused,0.40,80,0.59,0.60,0.78
 10,Rooftop Lights,Indigo Parade,indie pop,happy,0.76,124,0.81,0.82,0.35
+11,Neon Mirage,Velvet Circuit,afrobeats,playful,0.79,108,0.86,0.90,0.14
+12,Cathedral Static,Iron Veil,metal,aggressive,0.95,176,0.32,0.41,0.03
+13,Golden Hour Letters,Willow Arcade,folk,nostalgic,0.46,96,0.68,0.52,0.81
+14,Monsoon Bazaar,Saffron Pulse,world,adventurous,0.71,124,0.74,0.77,0.39
+15,Pixel Heartbeat,Bitstream Kids,chiptune,energetic,0.88,148,0.79,0.84,0.07
+16,Velvet Alley,Blue Ember,blues,melancholic,0.33,68,0.29,0.44,0.87
+17,Orbiting Lanterns,Temple Drift,trip-hop,dreamy,0.57,92,0.55,0.69,0.48
+18,City Pulse 3AM,Prism Line,drum and bass,urgent,0.92,174,0.61,0.83,0.06
